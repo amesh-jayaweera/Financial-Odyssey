@@ -12,15 +12,14 @@ class GameViewModel : ViewModel() {
                 Choice("Delay taking the job and save for the laptop over 4 months, using your disposable income (LKR 40,000). Then start the job. (Net monthly income: LKR 20,000 after 4 months)", "You avoid debt but delay your income potential for several months.")
             )
         ),
-        // Add other scenarios here
+        // random quizzes
     )
 
     private var scenarioIndex = 0
     val currentScenario: GameScenario
         get() = scenarios[scenarioIndex]
 
-    var savingsGoal = 0
-        private set
+    var savingsGoal: Float = 0F
 
     private val playerStatus = PlayerStatus(
         monthlySalary = 100000F,
@@ -32,7 +31,7 @@ class GameViewModel : ViewModel() {
 
     private val choicesMade = mutableListOf<Pair<GameScenario, Int>>()
 
-    fun setSavingsGoal(goal: Int) {
+    fun setSavingsGoal(goal: Float) {
         savingsGoal = goal
     }
 

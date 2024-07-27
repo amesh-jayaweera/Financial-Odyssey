@@ -46,4 +46,7 @@ dependencies {
 
     // navigation library
     implementation(libs.androidx.navigation.compose)
+
+    // material
+    implementation(libs.androidx.material)
 }
